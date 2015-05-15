@@ -1,3 +1,4 @@
-This is the demo application on click of Show Dialog button it displays custom dialog with list of values.
+This is a demo application 
+On click of Show Dialog button it displays custom dialog with list of resource values.
 
 @Author: Bhasuri.
