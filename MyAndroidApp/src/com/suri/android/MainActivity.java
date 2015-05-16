@@ -14,7 +14,7 @@ import android.widget.ListView;
 /**
  * A Simple MainActivity class loads list dialog on click of button.
  * 
- * @author Suri
+ * @author Bhasu
  *
  */
 public class MainActivity extends Activity {
@@ -43,10 +43,14 @@ public class MainActivity extends Activity {
 	 * To display List dialog
 	 */
 	private void showAlertDialog() {
-		// you can define your own array here 
-		// for String[] array = {"1", "2", "3", "4", "5"}
-		// or you can get it from resource file string.xml
-		String[] array = getResources().getStringArray(R.array.number_array);
+		//String[] array = getResources().getStringArray(R.array.number_array);
+		int start=5, end=10;
+		int size=end-start+1;
+		Integer[] array = new Integer[size];
+		
+		for (int i=0; i<size; i++) {
+			array[i] = start++;
+		}
 
 		LayoutInflater inflater = getLayoutInflater();
 		View convertView = (View) inflater.inflate(R.layout.dialog, null);
@@ -58,7 +62,8 @@ public class MainActivity extends Activity {
 		alertDialog.setTitle(getResources().getString(R.string.choose));
 		
 		ListView lv = (ListView) convertView.findViewById(R.id.listView);
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, array);
+		//ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, array);
+		ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_list_item_1, array);
 		lv.setAdapter(adapter);
 
 		alertDialog.show();

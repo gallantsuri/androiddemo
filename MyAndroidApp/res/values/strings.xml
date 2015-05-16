@@ -3,7 +3,7 @@
 
     <string name="app_name">Alert Dialog demo</string>
     <string name="button_alert">Show Dialog</string>
-	<string name="choose">Choose&#8230;&#8230;&#8230;</string>
+	<string name="choose">Choose&#8230;</string>
     <string-array name="number_array">
         <item>1</item>
         <item>2</item>
